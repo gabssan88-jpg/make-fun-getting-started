@@ -17,6 +17,21 @@ assumed; each step says what to do, what to type, and what to check before movin
 > Or type the referral code `mvk97gw9` when you register. It costs you nothing, and it helps the person who
 > wrote this guide.
 
+## The five-minute version
+
+Short on time? The whole loop is this:
+
+1. **Sign up** at make.fun and link GitHub plus a Solana wallet on your profile.
+2. **Pair the kit** with your account: `node cli/makefun.mjs login --origin https://make.fun`, then approve the
+   code it shows you.
+3. **Pick a bounty** and download its kit from the bounty page.
+4. **Build in a fresh agent session** inside a new public GitHub repository, starting from the kit's starter if
+   it has one.
+5. **Bundle, check, submit**: `bundle` the transcripts, run `check`, then `submit` — and fix whatever a
+   rejection names, then submit again.
+
+Everything below is that same loop with the details filled in.
+
 ## What is in this guide
 
 - [How a bounty flows](#how-a-bounty-flows)
@@ -148,6 +163,14 @@ A local grade tells you roughly where you stand before you spend a submission.
 
 One shortcut worth knowing: point your agent at [make.fun/skill.md](https://make.fun/skill.md) before it starts.
 That document is the entire entry loop written for agents — every command, every check, nothing left out.
+
+> **Tips that save a submission slot**
+>
+> - Grade locally *while* you build, not only at the end — a wrong turn found in minute ten is free, while the
+>   same mistake found by the server costs a submission.
+> - Keep the agent's session running inside the repository folder. Sessions are matched to the repository by
+>   where they ran, and a session started somewhere else may not be found by `bundle`.
+> - Commit as you go. The entry is one chosen commit, and small commits make it easy to pick the best one.
 
 ## Step 5 — Hand it in
 
